@@ -3,9 +3,24 @@
 <head>
   <link rel="stylesheet" href="css/flexbox.css?version=0.1">
   <title>Personal Profile Web Page</title>
+  <link rel="stylesheet" href="css/mystyle.css">
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: url('https://i.ibb.co/j3G25jR/sheena.jpg') no-repeat center center fixed;
+      background-size: contain;
+      color: white;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
     }
     .container {
       width: 80%;
@@ -14,6 +29,24 @@
     .gallery img {
       width: 100%;
       height: auto;
+      border: 3px solid white;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+    .gallery p {
+      color: white;
+      text-align: center;
+    }
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .flex-container a {
+      width: 200px;
     }
   </style>
 </head>
@@ -23,7 +56,7 @@
     
     <h2>About Me</h2>
     <a href="https://imgbb.com/" target="_blank">
-      <img src="https://i.ibb.co/FYsVTdG/cat.jpg" alt="cat" style="width:200px; height:200px; border:0;">
+      <img src="https://i.ibb.co/FYsVTdG/cat.jpg" alt="cat" style="width:200px; height:200px; border:3px solid white;">
     </a>
     <p>
       Hello! My name is Kurt Leonard A. Sauquillo. My name is Kurt, my friends call me by initials KL, I enjoy listening to music and playing instruments,
@@ -69,21 +102,19 @@
     
     <h2>Picture Gallery</h2>
     <div class="gallery">
-        <p> me fr</p>
-        <div class="flex-container">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>  
-      <a href="https://ibb.co/2Ymj61B">
-        <img src="https://i.ibb.co/Hp1r2fQ/me-fr.jpg" alt="me-fr" style="width:200px; height:200px; border:0;">
-      </a>
-      <a href="https://imgbb.com/">
-        <img src="https://i.ibb.co/fGLxq34/sonic.jpg" alt="sonic" style="width:200px; height:200px; border:0;">
-      </a>
-      <a href="https://ibb.co/s1qHk29">
-        <img src="https://i.ibb.co/7pK48Xt/kobe.jpg" alt="kobe" style="width:200px; height:200px; border:0;">
-      </a>
-    </div>  
+      <p>me fr</p>
+      <div class="flex-container">
+        <a href="https://ibb.co/2Ymj61B">
+          <img src="https://i.ibb.co/Hp1r2fQ/me-fr.jpg" alt="me-fr">
+        </a>
+        <a href="https://imgbb.com/">
+          <img src="https://i.ibb.co/fGLxq34/sonic.jpg" alt="sonic">
+        </a>
+        <a href="https://ibb.co/s1qHk29">
+          <img src="https://i.ibb.co/7pK48Xt/kobe.jpg" alt="kobe">
+        </a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
