@@ -1,74 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="css/grid.css?version=0.1">
   <title>Personal Profile Web Page</title>
   <style>
     body {
       font-family: Arial, sans-serif;
     }
+
     .container {
       width: 80%;
       margin: auto;
     }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-gap: 20px;
+      margin-top: 20px;
+    }
+
+    .sidebar {
+      grid-column: 1;
+    }
+    .main-content {
+      grid-column: 2;
+    }
+
     .gallery img {
       width: 100%;
       height: auto;
     }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
+
   <div class="container">
     <h1>Personal Profile</h1>
-    
-    <h2>About Me</h2>
-    <a href="https://imgbb.com/" target="_blank">
-      <img src="https://i.ibb.co/FYsVTdG/cat.jpg" alt="cat" style="width:200px; height:200px; border:0;">
-    </a>
-    <p>
-      Hello! My name is Kurt Leonard A. Sauquillo. My name is Kurt, my friends call me by initials KL, I enjoy listening to music and playing instruments,
-      as well as playing video games. I mainly play League of Legends at the moment but I used to play games like Valorant, Overwatch 2, etc.
-    </p>
-    <hr>
-    
-    <h2>Education & Achievements</h2>
-    <p>
-      I went to Sto Niño Catholic School for my Junior and Senior High School. I am currently at Asia Pacific College.
-    </p>
+
+    <div class="grid-container">
+      <div class="sidebar">
+        <h2>About Me</h2>
+        <a href="https://imgbb.com/" target="_blank">
+          <img src="https://i.ibb.co/FYsVTdG/cat.jpg" alt="cat" style="width:200px; height:200px; border:0;">
+        </a>
+        <p>
+          Hello! My name is Kurt Leonard A. Sauquillo. My name is Kurt, my friends call me by initials KL, I enjoy listening to music and playing instruments,
+          as well as playing video games. I mainly play League of Legends at the moment but I used to play games like Valorant, Overwatch 2, etc.
+        </p>
+      </div>
+
+      <div class="main-content">
+        <h2>Education & Achievements</h2>
+        <p>
+          I went to Sto Niño Catholic School for my Junior and Senior High School. I am currently at Asia Pacific College.
+        </p>
         
-    <h2>Course</h2>
-    <p>
-      3rd year I.T Student specializing in Mobile and Internet Technologies at Asia Pacific College.
-    </p>
-    <hr>
-    
-    <h2>IT Experience</h2>
-    <p>Things I have done related to I.T so far:</p>
-    <ol>
-      <li>I built my own PC from scratch.</li>
-      <li>Created an Arduino Project that can detect doors opening and closing using a motion sensor.</li>
-      <li>Troubleshooting my PC xD.</li>
-    </ol>
-    <hr>
-    
-    <h2>Hobbies & Interests</h2>
-    <ul>
-      <li>Gaming</li>
-      <li>Not Coding</li>
-      <li>Listening to Music</li>
-      <li>Playing instruments</li>
-    </ul>
-    <hr>
-    
-    <h2>Goals in Life</h2>
-    <p>
-      My goal is to graduate college and be done studying so I can finally get a job and get paid money. I also want to travel to different countries.
-      The countries I want to visit are Japan, Jamaica, Thailand, and Korea.
-    </p>
-    <hr>
-    
+        <h2>Course</h2>
+        <p>
+          3rd year I.T Student specializing in Mobile and Internet Technologies at Asia Pacific College.
+        </p>
+        <hr>
+        
+        <h2>IT Experience</h2>
+        <p>Things I have done related to I.T so far:</p>
+        <ol>
+          <li>I built my own PC from scratch.</li>
+          <li>Created an Arduino Project that can detect doors opening and closing using a motion sensor.</li>
+          <li>Troubleshooting my PC xD.</li>
+        </ol>
+        <hr>
+        
+        <h2>Hobbies & Interests</h2>
+        <ul>
+          <li>Gaming</li>
+          <li>Not Coding</li>
+          <li>Listening to Music</li>
+          <li>Playing instruments</li>
+        </ul>
+        <hr>
+        
+        <h2>Goals in Life</h2>
+        <p>
+          My goal is to graduate college and be done studying so I can finally get a job and get paid money. I also want to travel to different countries.
+          The countries I want to visit are Japan, Jamaica, Thailand, and Korea.
+        </p>
+        <hr>
+      </div>
+    </div>
+
     <h2>Picture Gallery</h2>
     <div class="gallery">
-        <p> me fr</p>
+      <p>me fr</p>
       <a href="https://ibb.co/2Ymj61B">
         <img src="https://i.ibb.co/Hp1r2fQ/me-fr.jpg" alt="me-fr" style="width:200px; height:200px; border:0;">
       </a>
@@ -78,7 +112,7 @@
       <a href="https://ibb.co/s1qHk29">
         <img src="https://i.ibb.co/7pK48Xt/kobe.jpg" alt="kobe" style="width:200px; height:200px; border:0;">
       </a>
-    </div>  
+    </div>
   </div>
 </body>
 </html>
