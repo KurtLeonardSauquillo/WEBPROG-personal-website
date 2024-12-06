@@ -2,30 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=0.1">
-  <link rel="stylesheet" href="css/grid.css?version=0.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Profile Web Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      margin: 0;
-      padding: 0;
-      background: url('https://i.ibb.co/j3G25jR/sheena.jpg') no-repeat center center fixed;
-      background-size: contain; /* Ensures the Sheena image covers the whole page */
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-areas:
-        'header header header header header header'
-        'menu main main main right right'
-        'menu footer footer footer footer footer';
-      gap: 10px;
-      background-color: rgba(241, 241, 241, 0.9); /* Semi-transparent light gray */
-      padding: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
 
@@ -33,7 +12,7 @@
     <h1>Personal Profile</h1>
 
     <div class="grid-container">
-      <!-- About Me Section -->
+      <!-- Left Side (About Me, Course, IT Experience, Hobbies) -->
       <div class="sidebar">
         <h2>About Me</h2>
         <a href="https://imgbb.com/" target="_blank">
@@ -43,21 +22,10 @@
           Hello! My name is Kurt Leonard A. Sauquillo. My name is Kurt, my friends call me by initials KL, I enjoy listening to music and playing instruments,
           as well as playing video games. I mainly play League of Legends at the moment but I used to play games like Valorant, Overwatch 2, etc.
         </p>
-      </div>
 
-      <!-- Main Content -->
-      <div class="main-content">
-        <h2>Education & Achievements</h2>
-        <p>
-          I went to Sto Niño Catholic School for my Junior and Senior High School. I am currently at Asia Pacific College.
-        </p>
-        
         <h2>Course</h2>
-        <p>
-          3rd year I.T Student specializing in Mobile and Internet Technologies at Asia Pacific College.
-        </p>
-        <hr>
-        
+        <p>3rd year I.T Student specializing in Mobile and Internet Technologies at Asia Pacific College.</p>
+
         <h2>IT Experience</h2>
         <p>Things I have done related to I.T so far:</p>
         <ol>
@@ -65,8 +33,7 @@
           <li>Created an Arduino Project that can detect doors opening and closing using a motion sensor.</li>
           <li>Troubleshooting my PC xD.</li>
         </ol>
-        <hr>
-        
+
         <h2>Hobbies & Interests</h2>
         <ul>
           <li>Gaming</li>
@@ -74,29 +41,34 @@
           <li>Listening to Music</li>
           <li>Playing instruments</li>
         </ul>
-        <hr>
-        
+      </div>
+
+      <!-- Right Side (Education, Goals) -->
+      <div class="main-content">
+        <h2>Education & Achievements</h2>
+        <p>
+          I went to Sto Niño Catholic School for my Junior and Senior High School. I am currently at Asia Pacific College.
+        </p>
+
         <h2>Goals in Life</h2>
         <p>
           My goal is to graduate college and be done studying so I can finally get a job and get paid money. I also want to travel to different countries.
           The countries I want to visit are Japan, Jamaica, Thailand, and Korea.
         </p>
-        <hr>
       </div>
     </div>
 
     <!-- Picture Gallery -->
     <h2>Picture Gallery</h2>
     <div class="gallery">
-      <p>me fr</p>
       <a href="https://ibb.co/2Ymj61B">
-        <img src="https://i.ibb.co/Hp1r2fQ/me-fr.jpg" alt="me-fr" style="width:200px; height:200px; border:0;">
+        <img src="https://i.ibb.co/Hp1r2fQ/me-fr.jpg" alt="me-fr">
       </a>
       <a href="https://imgbb.com/">
-        <img src="https://i.ibb.co/fGLxq34/sonic.jpg" alt="sonic" style="width:200px; height:200px; border:0;">
+        <img src="https://i.ibb.co/fGLxq34/sonic.jpg" alt="sonic">
       </a>
       <a href="https://ibb.co/s1qHk29">
-        <img src="https://i.ibb.co/7pK48Xt/kobe.jpg" alt="kobe" style="width:200px; height:200px; border:0;">
+        <img src="https://i.ibb.co/7pK48Xt/kobe.jpg" alt="kobe">
       </a>
     </div>
   </div>
