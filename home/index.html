@@ -8,51 +8,22 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      font-size: 12px; 
-    }
-
-    .container {
-      width: 70%;
-      margin: auto;
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+      background: url('https://i.ibb.co/j3G25jR/sheena.jpg') no-repeat center center fixed;
+      background-size: contain; /* Ensures the Sheena image covers the whole page */
     }
 
     .grid-container {
       display: grid;
-      grid-template-columns: 1fr 2fr;
-      grid-template-rows: auto auto 1fr; /* Adjust rows so About Me is at the top */
-      grid-gap: 10px;
-      margin-top: 10px;
-    }
-
-    .sidebar {
-      grid-column: 1;
-      grid-row: 1; /* Sidebar (About Me) is on the first row */
-    }
-
-    .main-content {
-      grid-column: 2;
-      grid-row: 2; /* Main content goes below About Me */
-    }
-
-    .gallery {
-      grid-column: 1 / -1; /* Make gallery span both columns */
-      display: flex;
+      grid-template-areas:
+        'header header header header header header'
+        'menu main main main right right'
+        'menu footer footer footer footer footer';
       gap: 10px;
-      justify-content: center;
-      margin-top: 10px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-    }
-
-    h2 {
-      margin-top: 10px;
-    }
-
-    p, ul, ol {
-      font-size: 12px;
+      background-color: rgba(241, 241, 241, 0.9); /* Semi-transparent light gray */
+      padding: 10px;
     }
   </style>
 </head>
