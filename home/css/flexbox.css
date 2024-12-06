@@ -1,13 +1,13 @@
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  background-color: #f1f1f1; 
   gap: 15px;
   justify-content: center;
+  background-color: #f1f1f1; /* Set the same background color as your child divs */
 }
 
 .flex-container > div {
-  background-color: #f1f1f1;
+  background-color: #f1f1f1; /* Ensures the child divs also have the same gray background */
   width: 100px;
   margin: 10px;
   text-align: center;
