@@ -3,16 +3,117 @@
 <head>
   <title>Personal Profile Web Page</title>
   <style>
+    /* Basic reset */
+    body, h1, h2, p, ol, ul, a {
+      margin: 0;
+      padding: 0;
+    }
+    
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://i.ibb.co/j3G25jR/sheena.jpg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      color: white;
     }
+
     .container {
-      width: 80%;
-      margin: auto;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6); /* Dark background for better readability */
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    /* Image styling */
+    .container img {
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    /* Hover effect on images */
+    .container img:hover {
+      transform: scale(1.1);
+    }
+
+    .gallery a {
+      display: inline-block;
+      margin: 10px;
+    }
+
     .gallery img {
-      width: 100%;
-      height: auto;
+      width: 200px;
+      height: 200px;
+    }
+
+    /* Buttons or links hover effects */
+    a:hover {
+      color: #ff6347;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 20px 0;
+    }
+
+    /* Styling for the list of hobbies */
+    ul {
+      margin-left: 20px;
+    }
+
+    ol {
+      margin-left: 20px;
+    }
+
+    /* Button styling for external JavaScript demo */
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin: 10px 0;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Styling for paragraph demo */
+    #demo {
+      font-size: 1.2em;
+      color: #ff6347;
     }
   </style>
 </head>
@@ -70,15 +171,39 @@
     <div class="gallery">
         <p> me fr</p>
       <a href="https://ibb.co/2Ymj61B">
-        <img src="https://i.ibb.co/Hp1r2fQ/me-fr.jpg" alt="me-fr" style="width:200px; height:200px; border:0;">
+        <img src="https://i.ibb.co/Hp1r2fQ/me-fr.jpg" alt="me-fr">
       </a>
       <a href="https://imgbb.com/">
-        <img src="https://i.ibb.co/fGLxq34/sonic.jpg" alt="sonic" style="width:200px; height:200px; border:0;">
+        <img src="https://i.ibb.co/fGLxq34/sonic.jpg" alt="sonic">
       </a>
       <a href="https://ibb.co/s1qHk29">
-        <img src="https://i.ibb.co/7pK48Xt/kobe.jpg" alt="kobe" style="width:200px; height:200px; border:0;">
+        <img src="https://i.ibb.co/7pK48Xt/kobe.jpg" alt="kobe">
       </a>
     </div>  
+
+    <!-- Demo External JavaScript Section -->
+    <h2>Demo External JavaScript</h2>
+    <p id="demo">A Paragraph.</p>
+
+    <!-- Two Buttons for Function 1 and Function 2 -->
+    <button type="button" onclick="function1()">Try It</button>
+    <button type="button" onclick="function2()">Try it</button>
+
+    <p>This example links to "myScript.js".</p>
+    <p>(myFunction is stored in js/myScript.js)</p>
   </div>
+
+  <!-- External JavaScript File (simulating myScript.js) -->
+  <script>
+    // Function 1: Change text of the paragraph with id="demo"
+    function function1() {
+      document.getElementById("demo").innerHTML = "You clicked the first button!";
+    }
+
+    // Function 2: Change text of the paragraph with id="demo"
+    function function2() {
+      document.getElementById("demo").innerHTML = "You clicked the second button!";
+    }
+  </script>
 </body>
 </html>
