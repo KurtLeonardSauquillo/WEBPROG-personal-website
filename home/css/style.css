@@ -1,310 +1,108 @@
-<style>
-    /* Basic reset */
-    body, h1, h2, p, ol, ul, a {
-      margin: 0;
-      padding: 0;
-    }
-    
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-image: url('https://i.pinimg.com/736x/46/c1/2f/46c12f03f0016e7b113c497d18a9b41c.jpg');
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 100vh;
-      color: white;
-    }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://t3.ftcdn.net/jpg/09/62/35/54/360_F_962355448_yR4mRLMnyVy0mq3hwHSzPQsQlugo7ifH.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+}
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.6); /* Dark background for better readability */
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    }
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for better text readability */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
-    h1 {
-      text-align: center;
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
+h1, h2 {
+  color: white;
+}
 
-    h2 {
-      font-size: 1.5em;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1em;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
-    }
-
-    /* Image styling */
-    .container img {
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
-    }
-
-    /* Hover effect on images */
-    .container img:hover {
-      transform: scale(1.1);
-    }
-
-    .gallery a {
-      display: inline-block;
-      margin: 10px;
-    }
-
-    .gallery img {
-      width: 200px;
-      height: 200px;
-    }
-
-    /* Basic reset */
-body, h1, h2, p, ol, ul, a {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 1.8em;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  p {
-    font-size: 1em;
-    line-height: 1.6;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  /* Flexbox for About Me section */
-  .about-me {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .about-me img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  /* Flexbox for Education section */
-  .education {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 30px;
-    text-align: left;
-  }
-  
-  .education div {
-    font-size: 1.1em;
-  }
-  
-  /* Flexbox for Hobbies & Interests section */
-  .hobbies {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    list-style-type: none;
-    margin-bottom: 30px;
-  }
-  
-  .hobbies li {
-    font-size: 1.1em;
-  }
-  
-  /* Flexbox for Goals section */
-  .goals {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  
-  .goals p {
-    max-width: 800px;
-    text-align: center;
-    font-size: 1.1em;
-    line-height: 1.6;
-  }
-  
-  /* Picture Gallery Flexbox */
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .gallery a {
-    display: block;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .gallery a:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  }
-  
-  /* Flexbox for Demo External JavaScript section */
-  .demo-js {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 1.1em;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  #demo {
-    font-size: 1.2em;
-    color: #ff6347;
-  }
-  
-  hr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 20px 0;
-  }
-  
-
-    /* Buttons or links hover effects */
-    a:hover {
-      color: #ff6347;
-    }
-
-    hr {
-      border: 0;
-      border-top: 1px solid #ccc;
-      margin: 20px 0;
-    }
-
-    /* Styling for the list of hobbies */
-    ul {
-      margin-left: 20px;
-    }
-
-    ol {
-      margin-left: 20px;
-    }
-/* Picture Gallery Styling */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .gallery a {
-    display: block;
-    width: 200px; /* Set square dimensions */
-    height: 200px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .gallery a:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  }
-  
-    /* Button styling for external JavaScript demo */
-    button {
-      padding: 10px 20px;
-      font-size: 1em;
-      margin: 10px 0;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
 
-    button:hover {
-      background-color: #45a049;
-    }
+.gallery a img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
 
-    /* Styling for paragraph demo */
-    #demo {
-      font-size: 1.2em;
-      color: #ff6347;
-    }
-  </style>
+.gallery a img:hover {
+  transform: scale(1.05);
+}
+
+.toggle-buttons {
+  margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+  margin-right: 15px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.toggle-buttons button:hover {
+  background-color: #45a049;
+}
+
+.toggle-buttons button:last-child {
+  margin-right: 0;
+}
+
+.comment-section {
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent for comment box */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.comment-box {
+  margin-bottom: 20px;
+}
+
+.comment-box textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  color: black;
+}
+
+.comment-box button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.comment-box button:hover {
+  background-color: #45a049;
+}
+
+.comment {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: black;
+}

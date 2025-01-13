@@ -4,88 +4,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Profile Web Page</title>
-  <link rel="stylesheet" href="css/style.css?version=0.1">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="container">
-  <h1>Personal Profile</h1>
-  
-  <h2>About Me</h2>
-  <div class="about-me">
+  <div class="container">
+    <h1>Personal Profile</h1>
+    
+    <h2>About Me</h2>
     <a href="https://imgbb.com/" target="_blank">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ2SDqBzW7ZtyAV_JxYQPdyEgxiPixCjhQ1w&s" alt="Nosferatu">
+      <img src="https://i.ibb.co/FYsVTdG/cat.jpg" alt="cat" style="width:200px; height:200px; border:0;">
     </a>
     <p>
       Hello! My name is Kurt Leonard A. Sauquillo. My name is Kurt, my friends call me by initials KL, I enjoy listening to music and playing instruments,
       as well as playing video games. I mainly play League of Legends at the moment but I used to play games like Valorant, Overwatch 2, etc.
     </p>
-  </div>
-  
-  <h2>Education & Achievements</h2>
-  <div class="education">
-    <div>I went to Sto Niño Catholic School for my Junior and Senior High School.</div>
-    <div>I am currently at Asia Pacific College.</div>
-  </div>
-  
-  <h2>Course</h2>
-  <p>
-    3rd year I.T Student specializing in Mobile and Internet Technologies at Asia Pacific College.
-  </p>
-  
-  <h2>IT Experience</h2>
-  <p>Things I have done related to I.T so far:</p>
-  <ol>
-    <li>I built my own PC from scratch.</li>
-    <li>Created an Arduino Project that can detect doors opening and closing using a motion sensor.</li>
-    <li>Troubleshooting my PC xD.</li>
-  </ol>
-  
-  <h2>Hobbies & Interests</h2>
-  <ul class="hobbies">
-    <li>Gaming</li>
-    <li>Not Coding</li>
-    <li>Listening to Music</li>
-    <li>Playing instruments</li>
-  </ul>
-  
-  <h2>Goals in Life</h2>
-  <div class="goals">
-    <p>
-      My goal is to graduate college and be done studying so I can finally get a job and get paid money. I also want to travel to different countries.
-      The countries I want to visit are Japan, Jamaica, Thailand, and Korea.
-    </p>
-  </div>
-  
-  <h2>Picture Gallery</h2>
-  <div class="gallery">
-    <p>me fr</p>
-    <a href="https://ibb.co/2Ymj61B"><img src="https://i.ibb.co/Hp1r2fQ/me-fr.jpg" alt="me-fr"></a>
-    <a href="https://imgbb.com/"><img src="https://i.ibb.co/fGLxq34/sonic.jpg" alt="sonic"></a>
-    <a href="https://ibb.co/s1qHk29"><img src="https://i.ibb.co/7pK48Xt/kobe.jpg" alt="kobe"></a>
-  </div>  
 
-  <!-- Leave a Comment Section -->
-  <div id="app" class="container">
-    <h2>Leave a Comment</h2>
+    <div class="toggle-buttons">
+      <button onclick="toggleSection('educationSection')">Education</button>
+      <button onclick="toggleSection('courseSection')">Course</button>
+      <button onclick="toggleSection('itExperienceSection')">IT Experience</button>
+      <button onclick="toggleSection('hobbiesSection')">Hobbies</button>
+      <button onclick="toggleSection('goalsSection')">Goals</button>
+      <button onclick="toggleSection('gallerySection')">Gallery</button>
+    </div>
 
-    <form @submit.prevent="submitComment">
-      <input v-model="name" type="text" placeholder="Your Name" required>
-      <textarea v-model="commentText" placeholder="Your Comment" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
+    <div id="educationSection" style="display: none;">
+      <h2>Education & Achievements</h2>
+      <p>
+        I went to Sto Niño Catholic School for my Junior and Senior High School. I am currently at Asia Pacific College.
+      </p>
+    </div>
+    
+    <div id="courseSection" style="display: none;">
+      <h2>Course</h2>
+      <p>
+        3rd year I.T Student specializing in Mobile and Internet Technologies at Asia Pacific College.
+      </p>
+    </div>
+    
+    <div id="itExperienceSection" style="display: none;">
+      <h2>IT Experience</h2>
+      <p>Things I have done related to I.T so far:</p>
+      <ol>
+        <li>I built my own PC from scratch.</li>
+        <li>Created an Arduino Project that can detect doors opening and closing using a motion sensor.</li>
+        <li>Troubleshooting my PC xD.</li>
+      </ol>
+    </div>
+    
+    <div id="hobbiesSection" style="display: none;">
+      <h2>Hobbies & Interests</h2>
+      <ul>
+        <li>Gaming</li>
+        <li>Not Coding</li>
+        <li>Listening to Music</li>
+        <li>Playing instruments</li>
+      </ul>
+    </div>
 
-    <div class="comments" v-if="comments.length > 0">
-      <h3>Comments</h3>
-      <div v-for="(comment, index) in comments" :key="index" class="comment">
-        <p><strong>{{ comment.name }}</strong> says:</p>
-        <p>{{ comment.text }}</p>
+    <div id="goalsSection" style="display: none;">
+      <h2>Goals in Life</h2>
+      <p>
+        My goal is to graduate college and be done studying so I can finally get a job and get paid money. I also want to travel to different countries.
+        The countries I want to visit are Japan, Jamaica, Thailand, and Korea.
+      </p>
+    </div>
+
+    <div id="gallerySection" style="display: none;">
+      <h2>Picture Gallery</h2>
+      <div class="gallery">
+        <a href="https://ibb.co/2Ymj61B">
+          <img src="https://i.ibb.co/Hp1r2fQ/me-fr.jpg" alt="me-fr">
+        </a>
+        <a href="https://imgbb.com/">
+          <img src="https://i.ibb.co/fGLxq34/sonic.jpg" alt="sonic">
+        </a>
+        <a href="https://ibb.co/s1qHk29">
+          <img src="https://i.ibb.co/7pK48Xt/kobe.jpg" alt="kobe">
+        </a>
+        <a href="https://ibb.co/6nrPC6y">
+          <img src="https://i.ibb.co/h7LWzpg/coby.jpg" alt="coby">
+        </a>
+        <a href="https://imgbb.com/">
+          <img src="https://i.ibb.co/rscxfZH/sonic.jpg" alt="new-sonic">
+        </a>
       </div>
     </div>
   </div>
 
-</div>
+  <!-- Vue.js Comment Section -->
+  <div id="app" class="comment-section">
+    <h2>Leave a Comment</h2>
+    <div class="comment-box">
+      <textarea v-model="newComment" placeholder="Write your comment here..."></textarea><br>
+      <button @click="addComment">Submit Comment</button>
+    </div>
+    <div v-for="(comment, index) in comments" :key="index" class="comment">
+      <p>{{ comment }}</p>
+    </div>
+  </div>
 
-<script src="js/comment.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
