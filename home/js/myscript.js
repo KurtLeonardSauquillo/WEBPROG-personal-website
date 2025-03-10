@@ -1,19 +1,23 @@
 function toggleSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  section.style.display = section.style.display === 'none' ? 'block' : 'none';
+  var section = document.getElementById(sectionId);
+  if (section.style.display === "none" || section.style.display === "") {
+      section.style.display = "block";
+  } else {
+      section.style.display = "none";
+  }
 }
 
 new Vue({
-  el: '#app',
+  el: "#app",
   data: {
-      newComment: '',
+      newComment: "",
       comments: []
   },
   methods: {
       addComment() {
-          if (this.newComment.trim() !== '') {
+          if (this.newComment.trim() !== "") {
               this.comments.push(this.newComment);
-              this.newComment = '';
+              this.newComment = "";
           }
       }
   }
